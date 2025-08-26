@@ -1,0 +1,30 @@
+/* Base style for all pagination links */
+.pagination .page-link {
+    color: #6c757d; /* text-muted */
+    background-color: #f8f9fa; /* bg-light */
+    border-color: #dee2e6; /* border-gray */
+}
+
+/* Style for links on hover and focus */
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* Style for the active link (selected page) */
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #6c757d; /* bg-secondary */
+    border-color: #6c757d;
+}
+
+/* Style for disabled links */
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    pointer-events: none; /* Ensures the link is not clickable */
+    cursor: default;
+}

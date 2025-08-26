@@ -1,0 +1,37 @@
+/* Custom CSS to control column widths and vertical alignment */
+/* First column with number */
+.col-index {
+    width: 1px; /* Minimal width for the index column */
+    white-space: nowrap;
+}
+
+/* Name column takes the remaining space */
+.col-name {
+    width: auto;
+}
+
+/* Action and Invoices columns */
+.col-action, .col-invoices {
+    width: 250px; /* Adjusting a fixed width for both columns to ensure they are the same size */
+    white-space: nowrap;
+}
+
+/* Vertically align all table cells to the middle */
+.align-middle {
+    vertical-align: middle;
+}
+
+/* Ensures buttons inside invoice-buttons take up equal space */
+.invoice-buttons {
+    width: 100%;
+}
+
+/* Ensures all buttons within the table use the same font-family */
+.table .btn {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensures btn-group takes up the full width of the cell */
+.btn-group {
+    width: 100%;
+}

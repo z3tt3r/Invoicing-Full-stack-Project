@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/InvoiceDatabase?createDatabaseIfNotExist=true&serverTimeZone=Europe/Prague
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  server:
+    port: 8080
+
+  springdoc:
+    api-docs.path: /api-docs
+
+  #puvodni nastaveni zakomentovano
+  #jpa:
+  #  open-in-view: true
+  #  hibernate:
+  #    ddl-auto: update
+  #  show-sql: true
+
+  #nastaveni pro vyvoj
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create-drop # Toto zajistí, že se databáze smaže a znovu vytvoří
+    show-sql: true #  zobrazí SQL dotazy
+    defer-datasource-initialization: true # Odloží spuštění data.sql po JPA inicializaci
+    properties: # detailní Hibernate logování
+      hibernate:
+        format_sql: true # naformátuje SQL dotazy
+        use_sql_comments: true # přidá komentáře do SQL
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE # zobrazí hodnoty parametrů
+
+  sql:
+    init:
+      mode: always # Zajistí, že data.sql se spustí vždy
+      enabled: true # Explicitně povolí spouštění SQL skriptů
+
+  jackson:
+    mapper:
+      accept-case-insensitive-enums: true
+
+# PRO VÝVOJ - Logging konfigurace pro debugging
+logging:
+  level:
+    org.hibernate.SQL: DEBUG # NOVÉ - SQL dotazy
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE # NOVÉ - parametry dotazů
+    org.springframework.orm.jpa: DEBUG # NOVÉ - JPA operace
+    org.springframework.jdbc.core: DEBUG # NOVÉ - JDBC operace
+    org.springframework.transaction: DEBUG # NOVÉ - transakce
+    cz.itnetwork: DEBUG # NOVÉ - vaše aplikace (upravte podle vašeho package)

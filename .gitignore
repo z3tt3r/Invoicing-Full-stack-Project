@@ -1,0 +1,19 @@
+# Ignorované soubory a adresáře z frontendu (React)
+/invoice-client-statrer/node_modules/
+/invoice-client-starter/build/
+
+# Ignorované soubory a adresáře z backendu (Spring Boot)
+/invoice-sever-starter/target/
+/invoice-server-starter/build/
+*.log
+*.class
+.mvnw
+.mvnw.cmd
+.gradle
+
+# Ignorované soubory z macOS
+.DS_Store
+
+# Ignorované soubory IDE (např. IntelliJ IDEA)
+.idea/
+.vscode/
