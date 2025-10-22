@@ -5,20 +5,13 @@ Designed as a clean example of full-stack architecture for portfolio and learnin
 
 ---
 
-![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-brightgreen?logo=springboot)
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
----
-
 ## 🧭 Overview
 
 | Layer | Stack | Description |
-|-------|--------|-------------|
-| **Backend** | Java 17 · Spring Boot · JPA | REST API for managing people and invoices. |
-| **Frontend** | React 18 · Axios | Simple UI for listing and editing invoices. |
-| **Database** | H2 (dev) · PostgreSQL (prod) | Schema and demo data defined in SQL scripts. |
+|-------|-------|-------------|
+| **Backend** | Java 17 · Spring Boot · JPA · MySQL | REST API for managing people, invoices and statistics |
+| **Frontend** | React 18 · Bootstrap · Axios | Simple UI for listing and editing invoices |
+| **Database** | MySQL (local) | Schema and demo data defined in SQL scripts |
 
 ---
 
@@ -26,43 +19,57 @@ Designed as a clean example of full-stack architecture for portfolio and learnin
 
 ```
 invoicing-fullstack/
-├── invoice-server-starter/   # Spring Boot backend
-└── invoice-client-starter/   # React frontend
+├── invoice-server-starter/     # Spring Boot backend
+└── invoice-client-starter/     # React frontend sources (src-fe/)
 ```
 
-### Backend
-- Spring Boot 3.x + Spring Data JPA  
-- MapStruct for DTO ↔ entity mapping  
-- Validation with JSR-380 annotations  
-- Soft delete using a `hidden` flag  
-- Demo data loaded from `data.sql`
+---
 
-Run the backend:
+## ⚙️ Backend
+
+- **Spring Boot 3 + Spring Data JPA**
+- Validation with JSR-380 annotations  
+- Mapping via **MapStruct**  
+- **Soft delete** using a hidden flag  
+- Demo data loaded from `data.sql`  
+- OpenAPI docs via `springdoc-openapi` (Swagger UI → `/swagger-ui`)
+
+**Run the backend**
+
 ```bash
 cd invoice-server-starter
 ./mvnw spring-boot:run
+# or: mvn spring-boot:run
 ```
-API: **http://localhost:8080**
 
-### Frontend
-- React 18 with functional components and hooks  
-- Axios-based API helpers in `src/api/`  
-- React Router for navigation  
-- Simple local state management (no Redux)
+API available at [`http://localhost:8080`](http://localhost:8080)
 
-Run the client:
+---
+
+## 💻 Frontend
+
+- **React 18** with functional components and hooks  
+- **Bootstrap 5** for UI styling  
+- Axios-based API helpers in `src-fe/utils/api.js`  
+- Simple routing and local state management  
+
+**Run the client (manual setup):**
+If not yet configured as an NPM project, run directly in your IDE or add a basic `package.json` with React scripts.
+
+Example:
 ```bash
 cd invoice-client-starter
 npm install
 npm start
 ```
-UI: **http://localhost:3000**
+
+UI available at [`http://localhost:3000`](http://localhost:3000)
 
 ---
 
 ## 🧪 Testing
 
-Backend integration tests use an in-memory H2 profile:
+**Backend integration tests**
 
 ```bash
 cd invoice-server-starter
@@ -70,7 +77,6 @@ cd invoice-server-starter
 ```
 
 Frontend tests (if available):
-
 ```bash
 cd invoice-client-starter
 npm test
@@ -81,8 +87,8 @@ npm test
 ## 🧰 Development notes
 
 - Java 17+, Node.js 18+ required  
-- Keep DTOs in sync between backend & frontend  
-- Lint & format before committing  
+- Keep DTOs and API contracts in sync between backend & frontend  
+- Format and lint before committing  
 - Semantic commit messages are encouraged (`feat:`, `fix:`, `chore:`)
 
 ---
@@ -92,14 +98,13 @@ npm test
 | Version | Changes |
 |----------|----------|
 | **0.1.0** | Initial setup with working backend & frontend |
-| **0.2.0** | Cleanup of unused code, improved README and docs |
+| **0.2.0** | Cleanup of unused code, updated README and docs |
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**.
 
----
-
-_© 2025 — Created by [Michal 'Z3TT3R' Musil]. Feel free to fork, learn, and build upon it._
+© 2025 — Created by [Michal "Z3TT3R" Musil].  
+Feel free to fork, learn and build upon it.
