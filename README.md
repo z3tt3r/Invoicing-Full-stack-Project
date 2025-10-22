@@ -1,4 +1,4 @@
-![App Preview](./docs/screens/invoice-list.png)
+![App Preview](./docs/screens/invoices.png)
 
 # 💼 Invoicing Full-Stack Project
 
@@ -110,12 +110,12 @@ npm test
 ### 💰 Seznam faktur
 Zobrazení všech faktur s filtrováním, odběrateli a možností úprav.
 
-![Invoice List](./docs/screens/invoice-list.png)
+![Invoice List](./docs/screens/invoices.png)
 
 ### 📊 Statistiky
 Souhrnné i detailní statistiky všech faktur a osob.
 
-![Statistics](./docs/screens/invoice-stats.png)
+![Statistics](./docs/screens/statistics.png)
 
 ### 🧑‍💼 Správa osob
 Zobrazení, úpravy a mazání osob s potvrzovacími dialogy.
