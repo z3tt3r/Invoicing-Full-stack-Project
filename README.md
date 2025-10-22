@@ -1,3 +1,5 @@
+![App Preview](./docs/screens/invoice-list.png)
+
 # 💼 Invoicing Full-Stack Project
 
 A lightweight full-stack invoicing app built with **Spring Boot** and **React**.  
@@ -99,6 +101,26 @@ npm test
 |----------|----------|
 | **0.1.0** | Initial setup with working backend & frontend |
 | **0.2.0** | Cleanup of unused code, updated README and docs |
+
+
+---
+
+## 🖼️ Screenshots
+
+### 💰 Seznam faktur
+Zobrazení všech faktur s filtrováním, odběrateli a možností úprav.
+
+![Invoice List](./docs/screens/invoice-list.png)
+
+### 📊 Statistiky
+Souhrnné i detailní statistiky všech faktur a osob.
+
+![Statistics](./docs/screens/invoice-stats.png)
+
+### 🧑‍💼 Správa osob
+Zobrazení, úpravy a mazání osob s potvrzovacími dialogy.
+
+![Delete Person Confirmation](./docs/screens/person-delete.png)
 
 ---
 
