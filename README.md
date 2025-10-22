@@ -79,7 +79,7 @@ cd invoice-server-starter
 ./mvnw test
 ```
 
-### Backend
+### Frontend
 No automated frontend tests are currently available.
 Planned: add simple smoke tests once a test runner is configured.
 
