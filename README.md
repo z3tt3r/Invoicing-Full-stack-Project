@@ -71,18 +71,17 @@ UI available at [`http://localhost:3000`](http://localhost:3000)
 
 ## 🧪 Testing
 
-**Backend integration tests**
+### Backend
+A basic smoke test verifies that the Spring Boot application context loads successfully.
 
 ```bash
 cd invoice-server-starter
 ./mvnw test
 ```
 
-Frontend tests (if available):
-```bash
-cd invoice-client-starter
-npm test
-```
+### Backend
+No automated frontend tests are currently available.
+Planned: add simple smoke tests once a test runner is configured.
 
 ---
 
