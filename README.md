@@ -107,18 +107,18 @@ npm test
 
 ## 🖼️ Screenshots
 
-### 💰 Seznam faktur
-Zobrazení všech faktur s filtrováním, odběrateli a možností úprav.
+### 💰 Invoice List
+View of all invoices with filtering, buyers and edit options.
 
 ![Invoice List](./docs/screens/invoices.png)
 
-### 📊 Statistiky
-Souhrnné i detailní statistiky všech faktur a osob.
+### 📊 Statistics
+Summary and detail of statistics and all invoices.
 
 ![Statistics](./docs/screens/statistics.png)
 
-### 🧑‍💼 Správa osob
-Zobrazení, úpravy a mazání osob s potvrzovacími dialogy.
+### 🧑‍💼 Persons Management
+View, editing and deletion of person with confirmation dialog window.
 
 ![Delete Person Confirmation](./docs/screens/person-delete.png)
 
