@@ -51,4 +51,4 @@ logging:
     org.springframework.orm.jpa: DEBUG # NOVÉ - JPA operace
     org.springframework.jdbc.core: DEBUG # NOVÉ - JDBC operace
     org.springframework.transaction: DEBUG # NOVÉ - transakce
-    cz.itnetwork: DEBUG # NOVÉ - vaše aplikace (upravte podle vašeho package)
+    cz.z3tt3r.invoicing: DEBUG # NOVÉ - vaše aplikace (upravte podle vašeho package)
